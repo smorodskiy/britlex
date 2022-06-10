@@ -78,10 +78,50 @@ body {
   padding-right: 0;
 }
 
-
 .btn-lettalk {
   border: 2px solid var(--btn-bg-color);
   border-radius: 5px;
   width: 220px;
   height: 70px;
+}
+
+/* getstarted-section */
+
+.getstarted-section {
+  display: flex;
+}
+
+.getstarted-section-title {
+  display: none;
+}
+
+.getstarted-wrapper {
+  align-content: center;
+}
+
+.getstarted-title {
+  font-weight: var(--thirs-font-weight);
+  font-size: 64px;
+  line-height: 1.25;
+}
+
+.getstarted-content {
+  padding-top: 40px;
+  padding-bottom: 61px;
+  font-size: 24px;
+  line-height: 1, 5;
+  color: var(--content-text-color);
+}
+
+.btn-getstarted {
+  width: 438px;
+  height: 118px;
+
+  background: var(--btn-bg-color);
+  border-radius: 15px;
+  border: none;
+
+  font-size: 36px;
+  line-height: 1.5;
+  color: var(--btn-text-color);
 }
