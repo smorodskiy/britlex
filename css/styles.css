@@ -1,23 +1,49 @@
+:root {
+    --bg-page-color: #E5E5E5;
+    --title-text-color-main: #000;
+    --title-text-color-second: #263238;
+
+    --text-color-listpages: #263238;
+    --content-text-color: #8F95A5;
+
+    --btn-bg-color: #263238;
+    --btn-text-color: #fff;
+
+    --price-content-text-color: #546269;
+
+}
+
+
+.block {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1338px;
+}
+
 .body {
-    margin-left: auto;
+  /* margin-left: auto;
     margin-right: auto;
-    max-width: 1200;
+    max-width: 1200; */
 }
 
 .navigation-bar {
-    display: flex;
-    margin-left: auto;
+  display: flex;
+  /* margin-left: auto;
     margin-right: auto;
     max-width: 1200;
-    width: 100%;
+    width: 100%; */
+}
+
+.navigation-bar-list {
+  display: flex;
 }
 
 .page-header {
-    margin-left: auto;
+  /* margin-left: auto;
     margin-right: auto;
-    max-width: 1200;
+    max-width: 1200; */
 }
 
 .btn-lettalk {
-    display: block;
+  /* display: block; */
 }
