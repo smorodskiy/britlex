@@ -1,0 +1,23 @@
+.body {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200;
+}
+
+.navigation-bar {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200;
+    width: 100%;
+}
+
+.page-header {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200;
+}
+
+.btn-lettalk {
+    display: block;
+}
