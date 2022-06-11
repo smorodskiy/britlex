@@ -40,8 +40,7 @@ body {
   font-size: 48px;
   line-height: 1.67;
   color: var(--title-text-color-main);
-  padding-top: 282px;
-  padding-bottom: 23px;
+  text-align: center;
 }
 
 /* header */
@@ -55,10 +54,14 @@ body {
   align-items: center;
 }
 
-.navigation-bar-logo {
+.logo {
   padding-right: 253px;
   font-size: 36px;
   line-height: 1.5;
+  color: var(--title-text-color-main);
+}
+.logo-secpart {
+  color: var(--content-text-color);
 }
 
 .navigation-bar-list {
@@ -94,6 +97,7 @@ body {
 .getstarted-section {
   display: flex;
   align-items: center;
+  padding-bottom: 103px;
 }
 
 .getstarted-section-title {
@@ -134,14 +138,15 @@ body {
 /* Skills section -----------------*/
 
 /* default param for section */
-.skills-section {
+.skills-section-wrapper {
   display: flex;
   font-size: 16px;
   line-height: 1.5;
+  margin-top: 96px;
 }
 
 /* Change all titles */
-.skills-section .skills-section-title {
+.skills-section-wrapper .skills-section-title {
   font-weight: var(--thirs-font-weight);
   font-size: 30px;
   line-height: 2.67;
@@ -166,7 +171,7 @@ body {
 }
 
 /* boxes param */
-.skills-back {
+.back-box {
   background-color: var(--content-background-color);
   border-radius: 10px;
   margin-left: 18px;
@@ -244,12 +249,23 @@ body {
 /* About US */
 
 .about-section {
-  max-width: 635px;
+  margin-top: 282px;
+  padding-bottom: 23px;
+}
+
+.about-title {
+  text-align: left;
+}
+
+.about-wrapper {
+  display: flex;
+  height: 570px;
 }
 
 .about-content {
   font-size: 20px;
   line-height: 1.5;
+  padding-bottom: 30px;
   /* color: var(--content-text-color); */
 }
 
@@ -269,5 +285,126 @@ body {
   font-weight: var(--thirs-font-weight);
   font-size: 48px;
   line-height: 1.67;
-  color: #2A3246;
+  color: #2a3246;
+}
+
+.about-pic {
+  height: 771px;
+  width: 549px;
+  position: relative;
+  top: -90px;
+  margin-left: 77px;
+  padding: 0 38.5px 0 38.5px;
+  box-sizing: border-box;
+}
+
+/* Pricing Section */
+
+.pricing-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 107px;
+  align-items: flex-end;
+}
+
+.pricing-column {
+  width: 33%;
+}
+
+.pricing-title {
+  font-weight: var(--thirs-font-weight);
+  font-size: 30px;
+  line-height: 1.6;
+  padding-bottom: 19px;
+  color: var(--title-text-color-second);
+}
+
+.pricing-content {
+  font-size: 20px;
+  line-height: 1.5;
+  padding-bottom: 29px;
+  height: 90px;
+}
+
+.pricing-price-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+  margin: 0;
+  padding: 0;
+
+  font-size: 18px;
+  line-height: 1.5;
+
+  color: var(--price-content-text-color);
+}
+
+.price {
+  margin-right: 10px;
+  font-size: 30px;
+  line-height: 1.5;
+  color: var(--title-text-color-second);
+}
+
+/* Contact Us */
+
+.contact-section {
+  margin-top: 290px;
+}
+
+.contact-wrapper {
+  display: flex;
+}
+
+.contact-pic {
+  position: relative;
+  top: -50px;
+}
+
+.contact-right-column {
+  padding-left: 104px;
+}
+
+.contact-right-column .title-section {
+  text-align: left;
+}
+
+.contact-content {
+  margin-top: 37px;
+  margin-bottom: 52px;
+  font-size: 20px;
+  line-height: 1.5;
+
+  color: var(--content-text-color);
+}
+
+.contact-input {
+  border: 1px solid var(--content-text-color);
+  border-radius: 10px;
+  width: 450px;
+  height: 80px;
+  padding: 0 33px 0 33px;
+  box-sizing: border-box;
+}
+
+.contact-btn {
+  width: 264px;
+  height: 80px;
+  border: none;
+  background: var(--btn-bg-color);
+  border-radius: 10px;
+  margin-left: 12px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.5;
+
+  color: var(--btn-text-color);
+}
+
+/* Footer */
+.terms-section {
+  height: 149px;
+  border-top: 1px solid #C4C4C4;
+  
 }
