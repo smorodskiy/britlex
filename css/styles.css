@@ -123,6 +123,7 @@ body {
 
 /* Skills section -----------------*/
 
+/* default param for section */
 .skills-section {
   display: flex;
   font-size: 16px;
@@ -130,6 +131,7 @@ body {
   color: var(--content-text-color);
 }
 
+/* Change all titles */
 .skills-section .skills-section-title {
   font-weight: 600;
   font-size: 30px;
@@ -154,21 +156,33 @@ body {
   color: var(--btn-text-color);
 }
 
+/* boxes param */
 .skills-back {
   background-color: var(--content-background-color);
   border-radius: 10px;
   margin-left: 18px;
   padding-left: 43px;
-  padding-right: 45px;
+  padding-right: 30px;
+  box-sizing: border-box;
 }
 
 .speaking-section {
-  min-width: 347px;
-  max-width: 347px;
-  align-self: center;
+  /* min-width: 435px;
+  max-width: 435px;
+  min-height: 894px;
+  max-height: 894px;
+   */
+  width: 435px;
+  height: 894px;
+  /* align-self: center; */
   padding-bottom: 92px;
   padding-top: 35px;
   margin-left: 0;
+}
+
+.speaking-section-pic {
+  left: -20px;
+  position: relative;
 }
 
 .speaking-section > .skills-section-content:first-of-type {
@@ -176,21 +190,44 @@ body {
 }
 
 .right-column-wrapper {
-  min-width: 885px;
-  max-width: 885px;
+  /* min-width: 906px;
+  max-width: 906px; */
+  width: 906px;
 }
 
 .writing-section,
 .reading-section {
-  /* width: 50%; */
+  width: calc(50% - 18px);
+  padding-bottom: 44px;
+  padding-top: 251px;
+  /* max-width: calc(50% - 18px); */
+  background-repeat: no-repeat;
+}
+
+.writing-section {
+  background-image: url(/images/typewriter.svg);
+  background-position-x: right;
+}
+.reading-section {
+  background-image: url(/images/reading-man.svg);
+  background-position-x: center;
+  background-position-y: 20px;
 }
 
 .write-read-wrapper {
   display: flex;
+  max-height: 531px;
 }
 
 .listening-section {
   display: flex;
-  margin-top: 18px;
-  padding-left: 48px;
+  margin-top: 20px;
+  /* padding-left: 48px; */
+  /* min-height: 343px; */
+  height: 343px;
+  align-items: center;
+}
+
+.listening-section .skills-section-content {
+  padding-right: 100px;
 }
