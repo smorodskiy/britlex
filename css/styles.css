@@ -29,9 +29,19 @@ body {
   font-style: normal;
   font-weight: var(--first-font-weight);
   font-size: 16px;
+  color: var(--content-text-color);
   /* margin-left: auto;
     margin-right: auto;
     max-width: 1200; */
+}
+
+.title-section {
+  font-weight: var(--thirs-font-weight);
+  font-size: 48px;
+  line-height: 1.67;
+  color: var(--title-text-color-main);
+  padding-top: 282px;
+  padding-bottom: 23px;
 }
 
 /* header */
@@ -97,6 +107,7 @@ body {
 .getstarted-title {
   font-weight: var(--thirs-font-weight);
   font-size: 64px;
+  color: var(--title-text-color-main);
   line-height: 1.25;
 }
 
@@ -105,7 +116,6 @@ body {
   padding-bottom: 61px;
   font-size: 24px;
   line-height: 1, 5;
-  color: var(--content-text-color);
 }
 
 .btn-getstarted {
@@ -128,12 +138,11 @@ body {
   display: flex;
   font-size: 16px;
   line-height: 1.5;
-  color: var(--content-text-color);
 }
 
 /* Change all titles */
 .skills-section .skills-section-title {
-  font-weight: 600;
+  font-weight: var(--thirs-font-weight);
   font-size: 30px;
   line-height: 2.67;
   color: var(--title-text-color-second);
@@ -230,4 +239,35 @@ body {
 
 .listening-section .skills-section-content {
   padding-right: 100px;
+}
+
+/* About US */
+
+.about-section {
+  max-width: 635px;
+}
+
+.about-content {
+  font-size: 20px;
+  line-height: 1.5;
+  /* color: var(--content-text-color); */
+}
+
+.about-list {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.about-item-title {
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--content-text-color);
+}
+
+.about-item-content {
+  font-weight: var(--thirs-font-weight);
+  font-size: 48px;
+  line-height: 1.67;
+  color: #2A3246;
 }
