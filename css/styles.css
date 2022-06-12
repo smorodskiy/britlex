@@ -17,6 +17,40 @@
   --first-font-weight: 400;
   --second-font-weight: 500;
   --thirs-font-weight: 600;
+
+  /* Variables */
+  --block-width: 1338px;
+  --body-font: 16px;
+  --title-section-font: 48px;
+  --title-section-lineheight: 1.67;
+  --btn-up-font: 15px;
+  --logo-font: 36px;
+  --nav-bar-list-font: 20px;
+  --getstarted-title-font: 64px;
+  --getstarted-title-line: 1.25;
+  --getstarted-content-font: 40px;
+
+  --btn-getstarted-width: 438px;
+  --btn-getstarted-height: 118px;
+  --btn-getstarted-font: 36px;
+
+  --getstarted-picture-width: 661px;
+
+  --btn-lettalk-width: 220px;
+  --btn-lettalk-height: 70px;
+
+  --skills-section-title-font: 30px;
+  --skills-section-title-line: 2.67;
+  --skills-section-btn-width: 230px;
+  --skills-section-btn-height: 60px;
+  --skills-section-btn-font: 20px;
+
+  --logo-lineheight: 1.5;
+  --nav-bar-list-lineheight: 1.5;
+  --getstarted-content-line: 1.5;
+  --btn-getstarted-line: 1.5;
+  --skills-section-wrapper-line: 1.5;
+  --skills-section-btn-line: 1.5;
 }
 
 html {
@@ -27,7 +61,7 @@ html {
 .block {
   margin-left: auto;
   margin-right: auto;
-  max-width: 1338px;
+  max-width: var(--block-width);
   scroll-behavior: smooth;
 }
 
@@ -35,7 +69,7 @@ body {
   font-family: "Poppins";
   font-style: normal;
   font-weight: var(--first-font-weight);
-  font-size: 16px;
+  font-size: var(--body-font);
   color: var(--content-text-color);
 }
 
@@ -52,7 +86,7 @@ button {
 
 .link {
   color: inherit;
-  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .link:hover {
@@ -64,8 +98,8 @@ button {
 /* Global title style */
 .title-section {
   font-weight: var(--thirs-font-weight);
-  font-size: 48px;
-  line-height: 1.67;
+  font-size: var(--title-section-font);
+  line-height: var(--title-section-lineheight);
   color: var(--title-text-color-main);
   text-align: center;
 }
@@ -84,7 +118,7 @@ button {
   cursor: pointer;
   color: #666666;
   font-family: Arial;
-  font-size: 15px;
+  font-size: var(--btn-up-font);
   font-weight: bold;
   padding: 6px 24px;
   text-decoration: none;
@@ -94,6 +128,10 @@ button {
 .btn-up:hover {
   background: linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
   background-color: #f6f6f6;
+}
+
+.picture {
+  /* max-width: 100%; */
 }
 
 /* header */
@@ -109,9 +147,9 @@ button {
 }
 
 .logo {
-  padding-right: 253px;
-  font-size: 36px;
-  line-height: 1.5;
+  /* padding-right: 253px; */
+  font-size: var(--logo-font);
+  line-height: var(--logo-lineheight);
   color: var(--title-text-color-main);
 }
 .logo-secpart {
@@ -121,9 +159,10 @@ button {
 .navigation-bar-list {
   flex: 1;
   display: flex;
+  justify-content: center;
   font-weight: var(--second-font-weight);
-  font-size: 20px;
-  line-height: 1.5;
+  font-size: var(--nav-bar-list-font);
+  line-height: var(--nav-bar-list-lineheight);
   color: var(--text-color-listpages);
 }
 
@@ -142,9 +181,9 @@ button {
 .btn-lettalk {
   border: 2px solid var(--btn-bg-color);
   border-radius: 5px;
-  width: 220px;
-  height: 70px;
-  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+  width: var(--btn-lettalk-width);
+  height: var(--btn-lettalk-height);
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .btn-lettalk:hover {
@@ -170,9 +209,9 @@ button {
 
 .getstarted-title {
   font-weight: var(--thirs-font-weight);
-  font-size: 64px;
+  font-size: var(--getstarted-title-font);
+  line-height: var(--getstarted-title-line);
   color: var(--title-text-color-main);
-  line-height: 1.25;
   /* display: block; */
   display: flex;
 }
@@ -186,21 +225,29 @@ button {
 .getstarted-content {
   padding-top: 40px;
   padding-bottom: 61px;
-  font-size: 24px;
-  line-height: 1, 5;
+  font-size: var(--getstarted-content-font);
+  line-height: var(--getstarted-content-line);
 }
 
 .btn-getstarted {
-  width: 438px;
-  height: 118px;
+  width: var(--btn-getstarted-width);
+  height: var(--btn-getstarted-height);
 
   background: var(--btn-bg-color);
   border-radius: 15px;
   border: none;
 
-  font-size: 36px;
-  line-height: 1.5;
+  font-size: var(--btn-getstarted-font);
+  line-height: var(--btn-getstarted-line);
   color: var(--btn-text-color);
+}
+
+.getstarted-picture {
+  max-width: 100%;
+}
+
+.getstarted-picture-wrapper {
+  min-width: var(--getstarted-picture-width);
 }
 
 /* Skills section -----------------*/
@@ -208,16 +255,16 @@ button {
 /* default param for section */
 .skills-section-wrapper {
   display: flex;
-  font-size: 16px;
-  line-height: 1.5;
+  /* font-size: 16px; */
+  line-height: var(--skills-section-wrapper-line);
   margin-top: 96px;
 }
 
 /* Change all titles */
 .skills-section-wrapper .skills-section-title {
   font-weight: var(--thirs-font-weight);
-  font-size: 30px;
-  line-height: 2.67;
+  font-size: var(--skills-section-title-font);
+  line-height: var(--skills-section-title-line);
   color: var(--title-text-color-second);
 }
 
@@ -227,14 +274,14 @@ button {
 }
 
 .skills-section-btn {
-  width: 230px;
-  height: 60px;
+  width: var(--skills-section-btn-width);
+  height: var(--skills-section-btn-height);
   background: var(--btn-bg-color);
   border-radius: 5px;
   border: none;
   font-weight: var(--second-font-weight);
-  font-size: 18px;
-  line-height: 1.5;
+  font-size: var(--skills-section-btn-font);
+  line-height: var(--skills-section-btn-line);
   color: var(--btn-text-color);
 }
 
@@ -242,7 +289,7 @@ button {
 .back-box {
   background-color: var(--content-background-color);
   border-radius: 10px;
-  margin-left: 18px;
+  margin-left: 20px;
   padding-left: 43px;
   padding-right: 30px;
   box-sizing: border-box;
@@ -254,8 +301,9 @@ button {
   min-height: 894px;
   max-height: 894px;
    */
-  width: 435px;
-  height: 894px;
+  max-width: 33.33%;
+  /* 435px; */
+  /* height: 894px; */
   /* align-self: center; */
   padding-bottom: 92px;
   padding-top: 35px;
@@ -268,25 +316,25 @@ button {
 }
 
 .speaking-section > .skills-section-content:first-of-type {
-  padding-bottom: 18px;
+  padding-bottom: 20px;
 }
 
 .right-column-wrapper {
   /* min-width: 906px;
   max-width: 906px; */
-  width: 906px;
+  /* width: 906px; */
 }
 
 .writing-section,
 .reading-section {
-  width: calc(50% - 18px);
+  width: calc(50% - 20px);
   padding-bottom: 44px;
-  padding-top: 251px;
+  /* padding-top: 251px; */
   /* max-width: calc(50% - 18px); */
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
 }
 
-.writing-section {
+/* .writing-section {
   background-image: url(/images/typewriter.svg);
   background-position-x: right;
 }
@@ -294,19 +342,23 @@ button {
   background-image: url(/images/reading-man.svg);
   background-position-x: center;
   background-position-y: 20px;
-}
+} */
 
 .write-read-wrapper {
   display: flex;
-  max-height: 531px;
+  height: 59.3%;
+  /* max-height: 531px; */
 }
 
 .listening-section {
   display: flex;
   margin-top: 20px;
+  height: calc(40.6% - 20px);
   /* padding-left: 48px; */
   /* min-height: 343px; */
-  height: 343px;
+  /* height: 343px; */
+  /* min-height: 100%; */
+  /* max-height: 100%; */
   align-items: center;
 }
 
@@ -492,11 +544,40 @@ button {
 }
 
 @media (min-width: 768px) and (max-width: 1359.98px) {
+  :root {
+    --block-width: 942px;
+    --body-font: 14px;
+    --title-section-font: 36px;
+    --title-section-lineheight: 2.22;
+    --btn-up-font: 15px;
+    --logo-font: 30px;
+    --nav-bar-list-font: 16px;
+    --getstarted-title-font: 48px;
+    --getstarted-title-line: 1.33;
+    --getstarted-content-font: 20px;
 
+    --btn-getstarted-width: 292px;
+    --btn-getstarted-height: 80px;
+    --btn-getstarted-font: 24px;
+
+    --getstarted-picture-width: 460px;
+
+    --btn-lettalk-width: 160px;
+    --btn-lettalk-height: 50px;
+
+    --skills-section-title-font: 22px;
+    --skills-section-title-line: 3.63;
+    --skills-section-btn-width: 196px;
+    --skills-section-btn-height: 57px;
+    --skills-section-btn-font: 18px;
+
+    --logo-lineheight: 1.5;
+    --nav-bar-list-lineheight: 1.5;
+    --getstarted-content-line: 1.5;
+    --btn-getstarted-line: 1.5;
+    --skills-section-btn-line: 1.5;
+  }
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
-
 }
-
-
