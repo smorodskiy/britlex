@@ -7,6 +7,7 @@
   --content-text-color: #8f95a5;
 
   --btn-bg-color: #263238;
+  --btn-bg-color-hover: #263238f0;
   --btn-text-color: #fff;
 
   --price-content-text-color: #546269;
@@ -18,10 +19,15 @@
   --thirs-font-weight: 600;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .block {
   margin-left: auto;
   margin-right: auto;
   max-width: 1338px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -35,6 +41,21 @@ body {
     max-width: 1200; */
 }
 
+button {
+  cursor: pointer;
+}
+
+.contact-btn:hover,
+.btn-lettalk:hover,
+.skills-section-btn:hover,
+.btn-getstarted:hover {
+  background-color: var(--btn-bg-color-hover);
+}
+
+.link {
+  color: inherit;
+}
+
 .title-section {
   font-weight: var(--thirs-font-weight);
   font-size: 48px;
@@ -43,7 +64,34 @@ body {
   text-align: center;
 }
 
+.btn-up {
+  position: fixed;
+  left: calc(100% - 81px);
+  bottom: 10px;
+
+  box-shadow: inset 0px 1px 0px 0px #ffffff;
+  background: linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+  background-color: #ffffff;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  display: inline-block;
+  cursor: pointer;
+  color: #666666;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ffffff;
+}
+
+.btn-up:hover {
+  background: linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+  background-color: #f6f6f6;
+}
+
 /* header */
+
 .page-header {
   padding-top: 57px;
   padding-bottom: 57px;
@@ -90,6 +138,10 @@ body {
   border-radius: 5px;
   width: 220px;
   height: 70px;
+}
+
+.btn-lettalk:hover {
+  color: var(--btn-text-color);
 }
 
 /* getstarted-section */
@@ -386,6 +438,7 @@ body {
   height: 80px;
   padding: 0 33px 0 33px;
   box-sizing: border-box;
+  color: var(--content-text-color);
 }
 
 .contact-btn {
@@ -404,7 +457,20 @@ body {
 
 /* Footer */
 .terms-section {
+  box-sizing: border-box;
+  padding-top: 31px;
   height: 149px;
-  border-top: 1px solid #C4C4C4;
-  
+  border-top: 1px solid #c4c4c4;
+}
+
+.terms-section > .logo {
+  padding-right: 638px;
+}
+
+.terms-text {
+  position: absolute;
+  font-size: 24px;
+  line-height: 1.5;
+
+  color: var(--content-text-color);
 }

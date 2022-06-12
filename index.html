@@ -15,24 +15,35 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <header class="page-header block">
+    <header class="page-header block" id="home">
       <nav class="navigation-bar">
-        <span class="logo"
-          >Brit<span class="logo-secpart">lex</span></span
-        >
+        <span class="logo">Brit<span class="logo-secpart">lex</span></span>
 
         <ul class="navigation-bar-list">
-          <li class="navigation-bar-item">Home</li>
-          <li class="navigation-bar-item">Skills</li>
-          <li class="navigation-bar-item">About Us</li>
-          <li class="navigation-bar-item space">Pricing</li>
-          <li class="navigation-bar-item">Contacts</li>
+          <li class="navigation-bar-item">
+            <a class="link" href="#home">Home</a>
+          </li>
+          <li class="navigation-bar-item">
+            <a class="link" href="#skills">Skills</a>
+          </li>
+          <li class="navigation-bar-item">
+            <a class="link" href="#about">About Us</a>
+          </li>
+          <li class="navigation-bar-item space">
+            <a class="link" href="#prices">Pricing</a>
+          </li>
+          <li class="navigation-bar-item">
+            <a class="link" href="#contacts">Contacts</a>
+          </li>
         </ul>
 
         <button class="btn-lettalk" type="button">Let’s Talk</button>
       </nav>
     </header>
     <main class="block">
+      <div class="scroll-up">
+        <a href="#home"><button class="btn-up">UP</button></a>
+      </div>
       <!-- HERO -->
       <section class="getstarted-section">
         <h1 class="getstarted-section-title">Learn Any Foreign Language</h1>
@@ -58,7 +69,7 @@
         </div>
       </section>
       <!-- SKILLS -->
-      <section class="skills-section">
+      <section class="skills-section" id="skills">
         <h2 class="title-section">Skills</h2>
         <div class="skills-section-wrapper">
           <div class="speaking-section back-box">
@@ -142,7 +153,8 @@
           </div>
         </div>
       </section>
-      <section class="about-section">
+      <!-- ABOUT -->
+      <section class="about-section" id="about">
         <h2 class="title-section about-title">About Us</h2>
         <div class="about-wrapper">
           <div>
@@ -179,7 +191,8 @@
           </div>
         </div>
       </section>
-      <section class="pricing-section">
+      <!-- PRICE -->
+      <section class="pricing-section" id="prices">
         <h2 class="title-section">Pricing</h2>
         <div class="pricing-wrapper">
           <ul class="pricing-column">
@@ -231,10 +244,16 @@
           </ul>
         </div>
       </section>
-      <section class="contact-section">        
+      <!-- CONTACTS -->
+      <section class="contact-section" id="contacts">
         <div class="contact-wrapper">
           <!-- <div></div> -->
-          <img class="contact-pic" src="./images/walking-guy.svg" alt="Walking guy" width="477" />
+          <img
+            class="contact-pic"
+            src="./images/walking-guy.svg"
+            alt="Walking guy"
+            width="477"
+          />
           <ul class="contact-right-column">
             <li><h2 class="title-section">Contact Us</h2></li>
             <li>
@@ -245,17 +264,23 @@
               </p>
             </li>
             <li>
-              <input class="contact-input" type="text" />
+              <input
+                class="contact-input"
+                type="text"
+                title="Enter Your E-mail"
+                value="Enter Your E-mail"
+              />
               <button class="contact-btn" type="button">Subscribe</button>
             </li>
           </ul>
         </div>
       </section>
+      <!-- FOOTER -->
       <footer class="terms-section">
-        <span class="logo"
-          >Brit<span class="logo-secpart">lex</span></span
+        <span class="logo">Brit<span class="logo-secpart">lex</span></span>
+        <span class="terms-text"
+          >Terms and Conditions • Privacy Policy • Cookie Policy</span
         >
-        <span class="terms-text">Terms and Conditions • Privacy Policy • Cookie Policy</span>
       </footer>
     </main>
   </body>
