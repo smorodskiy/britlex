@@ -23,6 +23,7 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Общий контейнер */
 .block {
   margin-left: auto;
   margin-right: auto;
@@ -36,9 +37,6 @@ body {
   font-weight: var(--first-font-weight);
   font-size: 16px;
   color: var(--content-text-color);
-  /* margin-left: auto;
-    margin-right: auto;
-    max-width: 1200; */
 }
 
 button {
@@ -46,7 +44,7 @@ button {
 }
 
 .contact-btn:hover,
-.btn-lettalk:hover,
+/* .btn-lettalk:hover, */
 .skills-section-btn:hover,
 .btn-getstarted:hover {
   background-color: var(--btn-bg-color-hover);
@@ -54,8 +52,16 @@ button {
 
 .link {
   color: inherit;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
 }
 
+.link:hover {
+  box-shadow: inset 100px 0 0 0 #000;
+  color: white;
+  border-radius: 5px;
+}
+
+/* Global title style */
 .title-section {
   font-weight: var(--thirs-font-weight);
   font-size: 48px;
@@ -138,10 +144,12 @@ button {
   border-radius: 5px;
   width: 220px;
   height: 70px;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
 }
 
 .btn-lettalk:hover {
   color: var(--btn-text-color);
+  box-shadow: inset 220px 0 0 0 #000;
 }
 
 /* getstarted-section */
@@ -165,6 +173,14 @@ button {
   font-size: 64px;
   color: var(--title-text-color-main);
   line-height: 1.25;
+  /* display: block; */
+  display: flex;
+}
+
+.getstarted-title::after {
+  content: url(/images/light-bulb.svg);
+  position: relative;
+  align-self: center;
 }
 
 .getstarted-content {
@@ -474,3 +490,13 @@ button {
 
   color: var(--content-text-color);
 }
+
+@media (min-width: 768px) and (max-width: 1359.98px) {
+
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+}
+
+
