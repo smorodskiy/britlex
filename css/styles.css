@@ -35,7 +35,7 @@
   --btn-getstarted-height: 118px;
   --btn-getstarted-font: 36px;
 
-  --getstarted-picture-width: 661px;
+  /* --getstarted-picture-width: 661px; */
 
   --btn-lettalk-width: 220px;
   --btn-lettalk-height: 70px;
@@ -149,11 +149,15 @@ button {
 .page-header {
   padding-top: 57px;
   padding-bottom: 57px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navigation-bar {
   display: flex;
   align-items: center;
+  flex: 1;
 }
 
 .logo {
@@ -201,6 +205,102 @@ button {
   box-shadow: inset 220px 0 0 0 #000;
 }
 
+/* Humburger */
+
+#menu__toggle {
+  opacity: 0;
+  display: none;
+}
+
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(90deg);
+}
+/* #menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+} */
+/* #menu__toggle:checked ~ .menu__btn > span::after {
+  top: -2.5px;
+  transform: rotate(90deg);
+} */
+#menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  left: 0;
+}
+
+.menu__btn {
+  display: flex;
+  align-items: center;
+  top: 20px;
+  left: 20px;
+
+  width: 26px;
+  height: 26px;
+
+  cursor: pointer;
+  z-index: 1;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 3px;
+
+  background-color: #616161;
+
+  transition-duration: 0.25s;
+}
+.menu__btn > span::before {
+  content: "";
+  top: -12px;
+}
+.menu__btn > span::after {
+  content: "";
+  top: 8px;
+}
+
+.menu__box {
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: -100%;
+
+  width: 300px;
+  height: 100%;
+
+  margin: 0;
+  padding: 80px 0;
+
+  list-style: none;
+
+  background-color: #eceff1;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+
+  transition-duration: 0.25s;
+}
+
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+
+  color: #333;
+
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition-duration: 0.25s;
+}
+.menu__item:hover {
+  background-color: #cfd8dc;
+}
+
 /* getstarted-section */
 
 .getstarted-section {
@@ -214,6 +314,7 @@ button {
 
 .getstarted-wrapper {
   align-content: center;
+  max-width: 49%;
 }
 
 .getstarted-title {
@@ -251,11 +352,11 @@ button {
 }
 
 .getstarted-picture {
-  max-width: 100%;
+  width: 100%;
 }
 
 .getstarted-picture-wrapper {
-  min-width: var(--getstarted-picture-width);
+  /* min-width: var(--getstarted-picture-width); */
 }
 
 /* Skills section -----------------*/
@@ -312,12 +413,16 @@ button {
   flex-direction: column;
   justify-content: center;
 
-  max-width: 33.33%;
+  max-width: calc(33.333% - 13.333px);
   margin-left: 0;
 }
 
 .speaking-section > .skills-section-content:first-of-type {
   padding-bottom: 20px;
+}
+
+.right-column-wrapper {
+  max-width: calc(66.66% + 13.33px);
 }
 
 .writing-section,
@@ -543,7 +648,14 @@ button {
   color: var(--content-text-color);
 }
 
-@media (min-width: 768px) and (max-width: 1359.98px) {
+@media (min-width: 959.98px) {
+  .hamburger-menu {
+    display: none;
+  }
+}
+
+/* 992px */
+@media (min-width: 960px) and (max-width: 1359.98px) {
   :root {
     --block-width: 942px;
     --body-font: 14px;
@@ -563,7 +675,7 @@ button {
     --btn-getstarted-height: 80px;
     --btn-getstarted-font: 24px;
 
-    --getstarted-picture-width: 460px;
+    /* --getstarted-picture-width: 460px; */
 
     --btn-lettalk-width: 160px;
     --btn-lettalk-height: 50px;
@@ -575,6 +687,312 @@ button {
     --skills-section-btn-width: 196px;
     --skills-section-btn-height: 57px;
     --skills-section-btn-font: 18px;
+  }
+
+  .title-content {
+    font-size: 22px;
+    line-height: 2;
+  }
+
+  .btn-getstarted {
+    border-radius: 8px;
+  }
+
+  .skills-section > .title-section {
+    margin-top: 72px;
+    margin-bottom: 53px;
+  }
+
+  .back-box {
+    padding-left: 28px;
+    padding-right: 17px;
+  }
+
+  .writing-section-pic {
+    margin-bottom: -35px;
+    margin-left: 31px;
+    max-width: 234px;
+  }
+
+  /* ABOUT US */
+
+  .about-section {
+    margin-top: 106px;
+  }
+
+  .about-wrapper {
+    height: 411px;
+  }
+
+  .about-content {
+    font-size: var(--first-font-size);
+  }
+
+  .about-item-content {
+    font-size: 30px;
+  }
+
+  .about-item-title {
+    font-size: var(--first-font-size);
+  }
+
+  .about-pic-wrapper {
+    background-color: inherit;
+    height: 286px;
+    top: -45px;
+  }
+
+  /* Price */
+
+  .pricing-wrapper {
+    margin-top: 32px;
+  }
+
+  .pricing-content {
+    padding-top: 10px;
+    font-size: var(--first-font-size);
+  }
+
+  .pricing-price-wrapper {
+    font-size: var(--first-font-size);
+  }
+
+  .price {
+    font-size: 24px;
+  }
+
+  .picture[alt="Lesson"] {
+    position: relative;
+    top: -30px;
+  }
+
+  /* Contact */
+
+  .contact-section {
+    margin-top: 150px;
+    margin-bottom: 190px;
+  }
+
+  .contact-pic {
+    width: 36%;
+    position: inherit;
+  }
+
+  .contact-right-column {
+    padding-left: 77px;
+  }
+
+  .contact-input {
+    width: 317px;
+    height: 60px;
+  }
+
+  .contact-btn {
+    width: 193px;
+    height: 60px;
+  }
+
+  .contact-content {
+    margin-top: 16px;
+    margin-bottom: 36px;
+  }
+}
+
+/* 767px */
+@media (min-width: 576px) and (max-width: 959.98px) {
+  :root {
+    --block-width: 690px;
+    --body-font: 13px;
+    --title-section-font: 30px;
+    --title-section-lineheight: 2.22;
+    --btn-up-font: 15px;
+    --logo-font: 30px;
+    --nav-bar-list-font: 16px;
+    --getstarted-title-font: 36px;
+    --getstarted-title-line: 1.33;
+    --getstarted-content-font: 16px;
+
+    /* FONTS */
+    --first-font-size: 14px;
+
+    --btn-getstarted-width: 236px;
+    --btn-getstarted-height: 65px;
+    --btn-getstarted-font: 18px;
+    /* border-radius: 5px; */
+
+    /* --getstarted-picture-width: 460px; */
+
+    --skills-section-wrapper-height: 662px;
+    --skills-section-title-font: 20px;
+    --skills-section-title-line: 1.8;
+    --skills-section-content-pad-bot: 20px;
+    --skills-section-btn-width: 178px;
+    --skills-section-btn-height: 50px;
+    --skills-section-btn-font: 16px;
+  }
+
+  .navigation-bar {
+    display: none;
+  }
+
+  .title-content {
+    font-size: 22px;
+    line-height: 2;
+  }
+
+  .getstarted-title::after {
+    transform: scale(0.9);
+  }
+
+  .btn-getstarted {
+    border-radius: 5px;
+  }
+
+  .skills-section > .title-section {
+    margin-top: 56px;
+    margin-bottom: 37px;
+  }
+
+  .back-box {
+    padding-left: 17px;
+    padding-right: 10px;
+  }
+
+  .writing-section,
+  .reading-section {
+    padding-bottom: 27px;
+  }
+
+  .writing-section-pic {
+    margin-bottom: -15px;
+    margin-left: 15px;
+    max-width: 180px;
+  }
+
+  .listening-section-pic {
+    max-width: 80%;;
+  }
+
+  /* ABOUT US */
+
+  .about-section {
+    margin-top: 106px;
+  }
+
+  .about-wrapper {
+    height: 411px;
+  }
+
+  .about-content {
+    font-size: var(--first-font-size);
+  }
+
+  .about-item-content {
+    font-size: 30px;
+  }
+
+  .about-item-title {
+    font-size: var(--first-font-size);
+  }
+
+  .about-pic-wrapper {
+    background-color: inherit;
+    height: 286px;
+    top: -45px;
+  }
+
+  /* Price */
+
+  .pricing-wrapper {
+    margin-top: 32px;
+  }
+
+  .pricing-content {
+    padding-top: 10px;
+    font-size: var(--first-font-size);
+  }
+
+  .pricing-price-wrapper {
+    font-size: var(--first-font-size);
+  }
+
+  .price {
+    font-size: 24px;
+  }
+
+  .picture[alt="Lesson"] {
+    position: relative;
+    top: -30px;
+  }
+
+  /* Contact */
+
+  .contact-section {
+    margin-top: 150px;
+    margin-bottom: 190px;
+  }
+
+  .contact-pic {
+    width: 36%;
+    position: inherit;
+  }
+
+  .contact-right-column {
+    padding-left: 77px;
+  }
+
+  .contact-input {
+    width: 317px;
+    height: 60px;
+  }
+
+  .contact-btn {
+    width: 193px;
+    height: 60px;
+  }
+
+  .contact-content {
+    margin-top: 16px;
+    margin-bottom: 36px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 574.98px) {
+  :root {
+    --block-width: 495px;
+    --body-font: 14px;
+    --title-section-font: 36px;
+    --title-section-lineheight: 2.22;
+    --btn-up-font: 15px;
+    --logo-font: 30px;
+    --nav-bar-list-font: 16px;
+    --getstarted-title-font: 48px;
+    --getstarted-title-line: 1.33;
+    --getstarted-content-font: 20px;
+
+    /* FONTS */
+    --first-font-size: 16px;
+
+    --btn-getstarted-width: 292px;
+    --btn-getstarted-height: 80px;
+    --btn-getstarted-font: 24px;
+
+    /* --getstarted-picture-width: 460px; */
+
+    --btn-lettalk-width: 160px;
+    --btn-lettalk-height: 50px;
+
+    --skills-section-wrapper-height: 696px;
+    --skills-section-title-font: 22px;
+    --skills-section-title-line: 1.8;
+    --skills-section-content-pad-bot: 20px;
+    --skills-section-btn-width: 196px;
+    --skills-section-btn-height: 57px;
+    --skills-section-btn-font: 18px;
+  }
+
+  .navigation-bar {
+    display: none;
   }
 
   .title-content {
@@ -680,7 +1098,4 @@ button {
     margin-top: 16px;
     margin-bottom: 36px;
   }
-}
-
-@media (min-width: 576px) and (max-width: 767.98px) {
 }
