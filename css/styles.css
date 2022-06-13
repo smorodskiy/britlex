@@ -17,12 +17,13 @@
   --first-font-weight: 400;
   --second-font-weight: 500;
   --thirs-font-weight: 600;
+  --first-font-size: 20px;
 
   /* Variables */
   --block-width: 1338px;
   --body-font: 16px;
   --title-section-font: 48px;
-  --title-section-lineheight: 1.67;
+  --title-section-lineheight: 2.18;
   --btn-up-font: 15px;
   --logo-font: 36px;
   --nav-bar-list-font: 20px;
@@ -40,19 +41,17 @@
   --btn-lettalk-height: 70px;
 
   --skills-section-wrapper-height: 894px;
-  --skills-section-title-font: 30px;
+
+  /* --title-content: 30px; */
+  /* --skills-section-title-font: 30px; */
+
   --skills-section-title-line: 2.67;
   --skills-section-content-pad-bot: 36px;
   --skills-section-btn-width: 230px;
   --skills-section-btn-height: 60px;
   --skills-section-btn-font: 20px;
 
-  --logo-lineheight: 1.5;
-  --nav-bar-list-lineheight: 1.5;
-  --getstarted-content-line: 1.5;
-  --btn-getstarted-line: 1.5;
-  --skills-section-wrapper-line: 1.5;
-  --skills-section-btn-line: 1.5;
+  --main-line-height: 1.5;
 }
 
 html {
@@ -73,6 +72,7 @@ body {
   font-weight: var(--first-font-weight);
   font-size: var(--body-font);
   color: var(--content-text-color);
+  line-height: var(--main-line-height);
 }
 
 button {
@@ -89,6 +89,7 @@ button {
 .link {
   color: inherit;
   transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border-radius: 5px;
 }
 
 .link:hover {
@@ -98,6 +99,13 @@ button {
 }
 
 /* Global title style */
+.title-content {
+  font-size: 30px;
+  font-weight: var(--thirs-font-weight);
+  line-height: var(--title-section-lineheight);
+  color: var(--title-text-color-second);
+}
+
 .title-section {
   font-weight: var(--thirs-font-weight);
   font-size: var(--title-section-font);
@@ -134,7 +142,6 @@ button {
 
 .picture {
   max-width: 100%;
-  /* max-height: 100%; */
 }
 
 /* header */
@@ -152,7 +159,7 @@ button {
 .logo {
   /* padding-right: 253px; */
   font-size: var(--logo-font);
-  line-height: var(--logo-lineheight);
+  line-height: var(--main-line-height);
   color: var(--title-text-color-main);
 }
 .logo-secpart {
@@ -165,7 +172,7 @@ button {
   justify-content: center;
   font-weight: var(--second-font-weight);
   font-size: var(--nav-bar-list-font);
-  line-height: var(--nav-bar-list-lineheight);
+  line-height: var(--main-line-height);
   color: var(--text-color-listpages);
 }
 
@@ -199,7 +206,6 @@ button {
 .getstarted-section {
   display: flex;
   align-items: center;
-  padding-bottom: 103px;
 }
 
 .getstarted-section-title {
@@ -215,7 +221,6 @@ button {
   font-size: var(--getstarted-title-font);
   line-height: var(--getstarted-title-line);
   color: var(--title-text-color-main);
-  /* display: block; */
   display: flex;
 }
 
@@ -229,7 +234,7 @@ button {
   padding-top: 40px;
   padding-bottom: 61px;
   font-size: var(--getstarted-content-font);
-  line-height: var(--getstarted-content-line);
+  line-height: var(--main-line-height);
 }
 
 .btn-getstarted {
@@ -241,7 +246,7 @@ button {
   border: none;
 
   font-size: var(--btn-getstarted-font);
-  line-height: var(--btn-getstarted-line);
+  line-height: var(--main-line-height);
   color: var(--btn-text-color);
 }
 
@@ -255,20 +260,24 @@ button {
 
 /* Skills section -----------------*/
 
+.skills-section > .title-section {
+  margin-top: 103px;
+  margin-bottom: 96px;
+}
+
 /* default param for section */
 .skills-section-wrapper {
   display: flex;
-  margin-top: 96px;
-  line-height: var(--skills-section-wrapper-line);
+  line-height: var(--main-line-height);
   height: var(--skills-section-wrapper-height);
 }
 
 /* Change all titles */
 .skills-section-wrapper .skills-section-title {
-  font-weight: var(--thirs-font-weight);
+  /* font-weight: var(--thirs-font-weight);
   font-size: var(--skills-section-title-font);
   line-height: var(--skills-section-title-line);
-  color: var(--title-text-color-second);
+  color: var(--title-text-color-second); */
 }
 
 .skills-section-content {
@@ -278,13 +287,13 @@ button {
 
 .skills-section-btn {
   width: var(--skills-section-btn-width);
-  height: var(--skills-section-btn-height);
+  min-height: var(--skills-section-btn-height);
   background: var(--btn-bg-color);
   border-radius: 5px;
   border: none;
   font-weight: var(--second-font-weight);
   font-size: var(--skills-section-btn-font);
-  line-height: var(--skills-section-btn-line);
+  line-height: var(--main-line-height);
   color: var(--btn-text-color);
 }
 
@@ -294,48 +303,43 @@ button {
   border-radius: 10px;
   margin-left: 20px;
   padding-left: 43px;
-  padding-right: 30px;
+  padding-right: 29px;
   box-sizing: border-box;
 }
 
 .speaking-section {
-  max-width: 33.33%;
-  /* padding-bottom: 92px; */
-  padding-top: 35px;
-  margin-left: 0;
-}
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-.speaking-section-pic {
-  /* not work!!!!! */
-  /* left: 20px; */
-  position: relative;
+  max-width: 33.33%;
+  margin-left: 0;
 }
 
 .speaking-section > .skills-section-content:first-of-type {
   padding-bottom: 20px;
 }
 
-
 .writing-section,
 .reading-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
   width: calc(50% - 20px);
   padding-bottom: 44px;
 }
-
-/* .writing-section {
-  background-image: url(/images/typewriter.svg);
-  background-position-x: right;
-}
-.reading-section {
-  background-image: url(/images/reading-man.svg);
-  background-position-x: center;
-  background-position-y: 20px;
-} */
 
 .write-read-wrapper {
   display: flex;
   height: 63%;
   /* max-height: 531px; */
+}
+
+.writing-section-pic {
+  margin-bottom: -35px;
+  margin-left: 31px;
+  /* max-width: 234px; */
 }
 
 .listening-section {
@@ -345,15 +349,19 @@ button {
   align-items: center;
 }
 
-.listening-section .skills-section-content {
-  padding-right: 100px;
+.listening-section > div {
+  width: 50%;
 }
+
+/* .listening-section .skills-section-content {
+  padding-right: 100px;
+} */
 
 /* About US */
 
 .about-section {
   margin-top: 282px;
-  padding-bottom: 23px;
+  /* padding-bottom: 23px; */
 }
 
 .about-title {
@@ -365,9 +373,13 @@ button {
   height: 570px;
 }
 
+.about-left-column {
+  max-width: 54.6%;
+}
+
 .about-content {
-  font-size: 20px;
-  line-height: 1.5;
+  font-size: var(--first-font-size);
+  line-height: var(--main-line-height);
   padding-bottom: 30px;
   /* color: var(--content-text-color); */
 }
@@ -379,8 +391,8 @@ button {
 }
 
 .about-item-title {
-  font-size: 20px;
-  line-height: 1.5;
+  font-size: var(--first-font-size);
+  line-height: var(--main-line-height);
   color: var(--content-text-color);
 }
 
@@ -391,14 +403,19 @@ button {
   color: #2a3246;
 }
 
-.about-pic {
+.about-pic-wrapper {
   height: 771px;
-  width: 549px;
+  /* width: 549px; */
+  max-width: calc(45.4% - 77px);
   position: relative;
   top: -90px;
   margin-left: 77px;
   padding: 0 38.5px 0 38.5px;
   box-sizing: border-box;
+}
+
+.about-pic {
+  max-width: 100%;
 }
 
 /* Pricing Section */
@@ -411,7 +428,7 @@ button {
 }
 
 .pricing-column {
-  width: 33%;
+  width: 29%;
 }
 
 .pricing-title {
@@ -423,8 +440,8 @@ button {
 }
 
 .pricing-content {
-  font-size: 20px;
-  line-height: 1.5;
+  font-size: var(--first-font-size);
+  line-height: var(--main-line-height);
   padding-bottom: 29px;
   height: 90px;
 }
@@ -438,7 +455,7 @@ button {
   padding: 0;
 
   font-size: 18px;
-  line-height: 1.5;
+  line-height: var(--main-line-height);
 
   color: var(--price-content-text-color);
 }
@@ -446,7 +463,7 @@ button {
 .price {
   margin-right: 10px;
   font-size: 30px;
-  line-height: 1.5;
+  line-height: var(--main-line-height);
   color: var(--title-text-color-second);
 }
 
@@ -476,8 +493,8 @@ button {
 .contact-content {
   margin-top: 37px;
   margin-bottom: 52px;
-  font-size: 20px;
-  line-height: 1.5;
+  font-size: var(--first-font-size);
+  line-height: var(--main-line-height);
 
   color: var(--content-text-color);
 }
@@ -500,8 +517,8 @@ button {
   border-radius: 10px;
   margin-left: 12px;
   font-weight: 500;
-  font-size: 20px;
-  line-height: 1.5;
+  font-size: var(--first-font-size);
+  line-height: var(--main-line-height);
 
   color: var(--btn-text-color);
 }
@@ -521,7 +538,7 @@ button {
 .terms-text {
   position: absolute;
   font-size: 24px;
-  line-height: 1.5;
+  line-height: var(--main-line-height);
 
   color: var(--content-text-color);
 }
@@ -539,6 +556,9 @@ button {
     --getstarted-title-line: 1.33;
     --getstarted-content-font: 20px;
 
+    /* FONTS */
+    --first-font-size: 16px;
+
     --btn-getstarted-width: 292px;
     --btn-getstarted-height: 80px;
     --btn-getstarted-font: 24px;
@@ -555,19 +575,111 @@ button {
     --skills-section-btn-width: 196px;
     --skills-section-btn-height: 57px;
     --skills-section-btn-font: 18px;
+  }
 
-    --logo-lineheight: 1.5;
-    --nav-bar-list-lineheight: 1.5;
-    --getstarted-content-line: 1.5;
-    --btn-getstarted-line: 1.5;
-    --skills-section-btn-line: 1.5;
+  .title-content {
+    font-size: 22px;
+    line-height: 2;
+  }
+
+  .skills-section > .title-section {
+    margin-top: 72px;
+    margin-bottom: 53px;
   }
 
   .back-box {
     padding-left: 28px;
-    padding-right: 13px;
+    padding-right: 17px;
   }
 
+  .writing-section-pic {
+    margin-bottom: -35px;
+    margin-left: 31px;
+    max-width: 234px;
+  }
+
+  /* ABOUT US */
+
+  .about-section {
+    margin-top: 106px;
+  }
+
+  .about-wrapper {
+    height: 411px;
+  }
+
+  .about-content {
+    font-size: var(--first-font-size);
+  }
+
+  .about-item-content {
+    font-size: 30px;
+  }
+
+  .about-item-title {
+    font-size: var(--first-font-size);
+  }
+
+  .about-pic-wrapper {
+    background-color: inherit;
+    height: 286px;
+    top: -45px;
+  }
+
+  /* Price */
+
+  .pricing-wrapper {
+    margin-top: 32px;
+  }
+
+  .pricing-content {
+    padding-top: 10px;
+    font-size: var(--first-font-size);
+  }
+
+  .pricing-price-wrapper {
+    font-size: var(--first-font-size);
+  }
+
+  .price {
+    font-size: 24px;
+  }
+
+  .picture[alt="Lesson"] {
+    position: relative;
+    top: -30px;
+  }
+
+  /* Contact */
+
+  .contact-section {
+    margin-top: 150px;
+    margin-bottom: 190px;
+  }
+
+  .contact-pic {
+    width: 36%;
+    position: inherit;
+  }
+
+  .contact-right-column {
+    padding-left: 77px;
+  }
+
+  .contact-input {
+    width: 317px;
+    height: 60px;
+  }
+
+  .contact-btn {
+    width: 193px;
+    height: 60px;
+  }
+
+  .contact-content {
+    margin-top: 16px;
+    margin-bottom: 36px;
+  }
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
