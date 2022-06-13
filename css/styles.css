@@ -460,13 +460,14 @@ button {
 
 .listening-section-wrapper {
   display: flex;
+  height: 100%;
+  align-items: center;
 }
 
 /* КОСТЫЛЬ */
 .section-for-mini-res {
   display: none;
 }
-
 
 /* .listening-section .skills-section-content {
   padding-right: 100px;
@@ -1028,8 +1029,8 @@ button {
     --skills-section-title-font: 22px;
     --skills-section-title-line: 1.8;
     --skills-section-content-pad-bot: 20px;
-    --skills-section-btn-width: 305px;
-    --skills-section-btn-height: 75px;
+    --skills-section-btn-width: 200px;
+    --skills-section-btn-height: 50px;
     --skills-section-btn-font: 18px;
   }
 
@@ -1069,46 +1070,49 @@ button {
     margin-bottom: 53px;
   }
 
-/* SKILLS SECTION --------------------------*/
+  /* SKILLS SECTION --------------------------*/
 
+  .speaking-section {
+    display: none;
+  }
+  .section-for-mini-res {
+    display: initial;
+    max-width: inherit;
+  }
 
-.speaking-section {
-  display: none;
-}
-.section-for-mini-res {
-  display: initial;
-  max-width: inherit;
-}
+  .section-for-mini-res,
+  .listening-section-wrapper {
+    width: calc(50% - 20px);
+    height: 534px;
 
-.section-for-mini-res,
-.listening-section-wrapper {
-  width: calc(50% - 20px);
-  height: 534px;
+    /* display: flex; */
+    /* flex-direction: column; */
+    justify-content: center;
+  }
 
-  /* display: flex; */
-  /* flex-direction: column; */
-  justify-content: center;
-}
+  .listening-section {
+    height: inherit;
+  }
+  .right-column-wrapper {
+    max-width: inherit;
+  }
+  .skills-section-wrapper {
+    height: inherit;
+  }
+  .listening-section-wrapper {
+    flex-direction: row-reverse;
+  }
 
-.listening-section {
-  height: inherit;
-}
-.right-column-wrapper {
-  max-width: inherit;
-}
-.skills-section-wrapper {
-  height: inherit;
-}
-.listening-section-wrapper {
- flex-direction: row-reverse;
-}
+  .write-read-wrapper {
+    height: 534px;
+  }
 
-.write-read-wrapper {
-  height: 534px;
-}
+  .writing-section,
+  .section-for-mini-res {
+    margin-left: 0;
+  }
 
-
-/* SKILLS SECTION --------------------------*/
+  /* SKILLS SECTION --------------------------*/
 
   .listening-section {
     display: flex;
@@ -1123,8 +1127,8 @@ button {
   }
 
   .back-box {
-    padding-left: 28px;
-    padding-right: 17px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   .writing-section-pic {
