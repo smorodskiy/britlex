@@ -1,5 +1,5 @@
 /* 575 */
-@media (min-width: 289px) and (max-width: 494.98px) {
+@media (max-width: 494.98px) {
   :root {
     --block-width: 289px;
     --body-font: 12px;
@@ -62,6 +62,10 @@
   .title-content {
     font-size: 18px;
     line-height: 2;
+  }
+  
+  .btn-getstarted {
+    border-radius: 5px;
   }
 
   .skills-section > .title-section {

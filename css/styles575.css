@@ -64,6 +64,10 @@
     line-height: 2;
   }
 
+  .btn-getstarted {
+    border-radius: 5px;
+  }
+
   .skills-section > .title-section {
     margin-top: 72px;
     margin-bottom: 53px;
