@@ -1,0 +1,348 @@
+/* 575 */
+@media (min-width: 289px) and (max-width: 494.98px) {
+  :root {
+    --block-width: 289px;
+    --body-font: 12px;
+    --title-section-font: 24px;
+    --title-section-lineheight: 2.22;
+    --btn-up-font: 18px;
+    --logo-font: 24px;
+    /* --nav-bar-list-font: 16px; */
+    --getstarted-title-font: 24px;
+    --getstarted-title-line: 1.33;
+    --getstarted-content-font: 14px;
+
+    /* FONTS */
+    --first-font-size: 13px;
+
+    --btn-getstarted-width: 289px;
+    --btn-getstarted-height: 60px;
+    --btn-getstarted-font: 15px;
+
+    /* --getstarted-picture-width: 460px; */
+
+    /* --btn-lettalk-width: 160px;
+    --btn-lettalk-height: 50px; */
+
+    /* --skills-section-wrapper-height: 696px; */
+    --skills-section-title-font: 18px;
+    --skills-section-title-line: 1.8;
+    /* --skills-section-content-pad-bot: 20px; */
+    --skills-section-btn-width: 178px;
+    --skills-section-btn-height: 50px;
+    --skills-section-btn-font: 14px;
+  }
+
+  .getstarted-section {
+    flex-direction: column-reverse;
+  }
+
+  .navigation-bar {
+    display: none;
+  }
+
+  .getstarted-wrapper {
+    max-width: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .getstarted-title {
+    /* justify-content: center; */
+  }
+  .getstarted-title::after {
+    content: "";
+  }
+
+  .getstarted-content {
+    /* text-align: center; */
+  }
+
+  .title-content {
+    font-size: 18px;
+    line-height: 2;
+  }
+
+  .skills-section > .title-section {
+    margin-top: 72px;
+    margin-bottom: 53px;
+  }
+
+  /* SKILLS SECTION --------------------------*/
+
+  /* .speaking-section {
+    display: none;
+  }
+  .section-for-mini-res {
+    display: initial;
+    max-width: inherit;
+  } */
+
+  /* .section-for-mini-res,
+  .listening-section-wrapper {
+    width: calc(50% - 20px);
+    height: 534px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  } */
+
+  /* .listening-section {
+    height: inherit;
+  } */
+  /* .right-column-wrapper {
+    max-width: inherit;
+  }
+  .skills-section-wrapper {
+    height: inherit;
+  } */
+  /* .listening-section-wrapper {
+    flex-direction: row-reverse;
+  }
+
+  .write-read-wrapper {
+    height: 534px;
+  } */
+
+  /* .writing-section,
+  .section-for-mini-res {
+    margin-left: 0;
+  } */
+
+  .skills-section-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      "a"
+      "b"
+      "c"
+      "d";
+    height: inherit;
+  }
+
+  .speaking-section {
+    grid-area: a;
+  }
+  .writing-section {
+    grid-area: b;
+  }
+  .reading-section {
+    grid-area: c;
+  }
+  .listening-section {
+    grid-area: d;
+  }
+
+  /* SKILLS SECTION --------------------------*/
+
+  .speaking-section,
+  .writing-section,
+  .reading-section,
+  .listening-section {
+    padding-bottom: 27px;
+    min-height: 538.5px;
+    justify-content: flex-start;
+  }
+
+  .writing-section,
+  .reading-section,
+  .listening-section {
+    justify-content: center;
+  }
+
+  .listening-section {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    /* margin-top: 20px; */
+    /* height: inherit; */
+    /* align-items: center; */
+  }
+  /* 
+  .right-column-wrapper {
+    max-width: 100%;
+  } */
+
+  .back-box {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .writing-section-pic {
+    margin-bottom: -35px;
+    margin-left: 31px;
+    /* max-width: 234px; */
+  }
+
+  .listening-section-second-div,
+  .writing-section-pic,
+  .reading-section-pic,
+  .listening-section-pic {
+    flex-basis: 35%;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+
+  .listening-section-pic {
+    margin-top: 30px;
+  }
+
+  .listening-section-first-div {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .skills-section-grid .title-content {
+    flex-basis: 10%;
+  }
+
+  .skills-section-content {
+    flex: 1;
+  }
+
+  /* ABOUT US */
+
+  .about-title {
+    text-align: center;
+  }
+
+  .about-section {
+    margin-top: 84px;
+  }
+
+  .about-wrapper {
+    height: 100%;
+    flex-direction: column-reverse;
+  }
+
+  .about-left-column {
+    max-width: inherit;
+  }
+
+  .about-content {
+    font-size: var(--first-font-size);
+    text-align: justify;
+  }
+
+  .about-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-item {
+    width: 33%;
+    margin-top: 50px;
+  }
+  .about-item-content {
+    font-size: 24px;
+  }
+
+  .about-item-title {
+    font-size: var(--first-font-size);
+  }
+
+  .about-pic-wrapper {
+    background-color: inherit;
+    height: 100%;
+    /* width: 549px; */
+    max-width: inherit;
+    position: inherit;
+    top: 0;
+    margin-left: 0;
+    padding: 0;
+  }
+
+  /* Price */
+
+  .pricing-section {
+    margin-top: 131px;
+  }
+
+  .pricing-wrapper {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pricing-column:first-child {
+    margin-top: 0;
+  }
+
+  .pricing-column {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
+  }
+
+  .pricing-content {
+    padding-top: 10px;
+    font-size: var(--first-font-size);
+    height: inherit;
+  }
+
+  .pricing-price-wrapper {
+    font-size: var(--first-font-size);
+  }
+
+  .price {
+    font-size: 22px;
+  }
+
+  .picture[alt="Lesson"] {
+    position: relative;
+    top: 0;
+  }
+
+  /* Contact */
+
+  .contact-wrapper {
+    flex-direction: column;
+  }
+
+  .contact-section {
+    margin-top: 150px;
+    margin-bottom: 144px;
+  }
+
+  .contact-pic {
+    width: 100%;
+    position: inherit;
+  }
+
+  .contact-right-column {
+    padding-left: 0;
+  }
+
+  .contact-input {
+    width: 100%;
+    height: 60px;
+  }
+
+  .contact-btn {
+    width: 100%;
+    height: 60px;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .contact-content {
+    margin-top: 16px;
+    margin-bottom: 36px;
+  }
+
+  .terms-text {
+    font-size: 11px;
+  }
+
+  .terms-section {
+    flex-direction: column;
+  }
+  .terms-section > logo {
+    align-self: center;
+  }
+}

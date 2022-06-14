@@ -1,4 +1,5 @@
 :root {
+
   --bg-page-color: #e5e5e5;
   --title-text-color-main: #000;
   --title-text-color-second: #263238;
@@ -13,6 +14,7 @@
   --price-content-text-color: #546269;
 
   --content-background-color: #f5f5f5;
+
   /* FONT */
   --first-font-weight: 400;
   --second-font-weight: 500;
@@ -35,15 +37,10 @@
   --btn-getstarted-height: 118px;
   --btn-getstarted-font: 36px;
 
-  /* --getstarted-picture-width: 661px; */
-
   --btn-lettalk-width: 220px;
   --btn-lettalk-height: 70px;
 
   --skills-section-wrapper-height: 894px;
-
-  /* --title-content: 30px; */
-  /* --skills-section-title-font: 30px; */
 
   --skills-section-title-line: 2.67;
   --skills-section-content-pad-bot: 36px;
@@ -54,6 +51,7 @@
   --main-line-height: 1.5;
 }
 
+/* Плавная прокрута */
 html {
   scroll-behavior: smooth;
 }
@@ -80,7 +78,6 @@ button {
 }
 
 .contact-btn:hover,
-/* .btn-lettalk:hover, */
 .skills-section-btn:hover,
 .btn-getstarted:hover {
   background-color: var(--btn-bg-color-hover);
@@ -359,7 +356,26 @@ button {
   /* min-width: var(--getstarted-picture-width); */
 }
 
-/* Skills section -----------------*/
+
+
+
+/* Skills section ------------------------------*/
+
+/* GRID SKILLS */
+
+.skills-section-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  }
+  
+  .speaking-section { grid-area: 1 / 1 / 3 / 2;}
+  .writing-section { grid-area: 1 / 2 / 2 / 3;}
+  .reading-section { grid-area: 1 / 3 / 2 / 4;}
+  .listening-section { grid-area: 2 / 2 / 3 / 4;}
+/* ------------------- */
 
 .skills-section > .title-section {
   margin-top: 103px;
@@ -367,18 +383,10 @@ button {
 }
 
 /* default param for section */
-.skills-section-wrapper {
-  display: flex;
+.skills-section-grid {
+  /* display: flex; */
   line-height: var(--main-line-height);
   height: var(--skills-section-wrapper-height);
-}
-
-/* Change all titles */
-.skills-section-wrapper .skills-section-title {
-  /* font-weight: var(--thirs-font-weight);
-  font-size: var(--skills-section-title-font);
-  line-height: var(--skills-section-title-line);
-  color: var(--title-text-color-second); */
 }
 
 .skills-section-content {
@@ -402,7 +410,7 @@ button {
 .back-box {
   background-color: var(--content-background-color);
   border-radius: 10px;
-  margin-left: 20px;
+  /* margin-left: 20px; */
   padding-left: 43px;
   padding-right: 29px;
   box-sizing: border-box;
@@ -413,7 +421,8 @@ button {
   flex-direction: column;
   justify-content: center;
 
-  max-width: calc(33.333% - 13.333px);
+  /* width: 100%; */
+  /* max-width: calc(33.333% - 13.333px); */
   margin-left: 0;
 }
 
@@ -421,25 +430,25 @@ button {
   padding-bottom: 20px;
 }
 
-.right-column-wrapper {
+/* .right-column-wrapper {
   max-width: calc(66.66% + 13.33px);
-}
+} */
 
 .writing-section,
 .reading-section {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  height: 100%;
-  width: calc(50% - 20px);
+  /* height: 100%; */
+  /* width: calc(50% - 20px); */
   padding-bottom: 44px;
 }
 
-.write-read-wrapper {
+/* .write-read-wrapper {
   display: flex;
   height: 63%;
-  /* max-height: 531px; */
-}
+  max-height: 531px;
+} */
 
 .writing-section-pic {
   margin-bottom: -35px;
@@ -449,32 +458,25 @@ button {
 
 .listening-section {
   display: flex;
-  margin-top: 20px;
-  height: calc(36.6% - 20px);
+  /* margin-top: 20px; */
+  /* height: calc(36.6% - 20px); */
   align-items: center;
 }
 
-.listening-section > div {
-  /* width: 50%; */
-}
 
-.listening-section-wrapper {
+/* .listening-section-wrapper {
   display: flex;
   height: 100%;
   align-items: center;
-}
-
-/* КОСТЫЛЬ */
-.section-for-mini-res {
-  display: none;
-}
-
-/* .listening-section .skills-section-content {
-  padding-right: 100px;
 } */
 
-/* About US */
+/* КОСТЫЛЬ */
+/* .section-for-mini-res {
+  display: none;
+} */
 
+
+/* About US ----------------------------------*/
 .about-section {
   margin-top: 282px;
   /* padding-bottom: 23px; */
@@ -651,572 +653,13 @@ button {
 
 .terms-text {
   font-size: 24px;
-  line-height: var(--main-line-height);
+  /* line-height: var(--main-line-height); */
+  line-height: 50px;
   color: var(--content-text-color);
 }
 
 @media (min-width: 959.98px) {
   .hamburger-menu {
     display: none;
-  }
-}
-
-/* 992px */
-@media (min-width: 960px) and (max-width: 1359.98px) {
-  :root {
-    --block-width: 942px;
-    --body-font: 14px;
-    --title-section-font: 36px;
-    --title-section-lineheight: 2.22;
-    --btn-up-font: 15px;
-    --logo-font: 30px;
-    --nav-bar-list-font: 16px;
-    --getstarted-title-font: 48px;
-    --getstarted-title-line: 1.33;
-    --getstarted-content-font: 20px;
-
-    /* FONTS */
-    --first-font-size: 16px;
-
-    --btn-getstarted-width: 292px;
-    --btn-getstarted-height: 80px;
-    --btn-getstarted-font: 24px;
-
-    /* --getstarted-picture-width: 460px; */
-
-    --btn-lettalk-width: 160px;
-    --btn-lettalk-height: 50px;
-
-    --skills-section-wrapper-height: 696px;
-    --skills-section-title-font: 22px;
-    --skills-section-title-line: 1.8;
-    --skills-section-content-pad-bot: 20px;
-    --skills-section-btn-width: 196px;
-    --skills-section-btn-height: 57px;
-    --skills-section-btn-font: 18px;
-  }
-
-  .title-content {
-    font-size: 22px;
-    line-height: 2;
-  }
-
-  .btn-getstarted {
-    border-radius: 8px;
-  }
-
-  .skills-section > .title-section {
-    margin-top: 72px;
-    margin-bottom: 53px;
-  }
-
-  .back-box {
-    padding-left: 28px;
-    padding-right: 17px;
-  }
-
-  .writing-section-pic {
-    margin-bottom: -35px;
-    margin-left: 31px;
-    max-width: 234px;
-  }
-
-  /* ABOUT US */
-
-  .about-section {
-    margin-top: 106px;
-  }
-
-  .about-wrapper {
-    height: 411px;
-  }
-
-  .about-content {
-    font-size: var(--first-font-size);
-  }
-
-  .about-item-content {
-    font-size: 30px;
-  }
-
-  .about-item-title {
-    font-size: var(--first-font-size);
-  }
-
-  .about-pic-wrapper {
-    background-color: inherit;
-    height: 286px;
-    top: -45px;
-  }
-
-  /* Price */
-
-  .pricing-wrapper {
-    margin-top: 32px;
-  }
-
-  .pricing-content {
-    padding-top: 10px;
-    font-size: var(--first-font-size);
-  }
-
-  .pricing-price-wrapper {
-    font-size: var(--first-font-size);
-  }
-
-  .price {
-    font-size: 24px;
-  }
-
-  .pricing-price-wrapper {
-    width: 205px;
-    height: 45px;
-  }
-
-  .picture[alt="Lesson"] {
-    position: relative;
-    top: -30px;
-  }
-
-  /* Contact */
-
-  .contact-section {
-    margin-top: 150px;
-    margin-bottom: 190px;
-  }
-
-  .contact-pic {
-    width: 36%;
-    position: inherit;
-  }
-
-  .contact-right-column {
-    padding-left: 77px;
-  }
-
-  .contact-input {
-    width: 317px;
-    height: 60px;
-  }
-
-  .contact-btn {
-    width: 193px;
-    height: 60px;
-  }
-
-  .contact-content {
-    margin-top: 16px;
-    margin-bottom: 36px;
-  }
-
-  .terms-text {
-    font-size: 16px;
-  }
-}
-
-/* 767px */
-@media (min-width: 576px) and (max-width: 959.98px) {
-  :root {
-    --block-width: 690px;
-    --body-font: 13px;
-    --title-section-font: 30px;
-    --title-section-lineheight: 2.22;
-    --btn-up-font: 15px;
-    --logo-font: 30px;
-    --nav-bar-list-font: 16px;
-    --getstarted-title-font: 36px;
-    --getstarted-title-line: 1.33;
-    --getstarted-content-font: 16px;
-
-    /* FONTS */
-    --first-font-size: 14px;
-
-    --btn-getstarted-width: 236px;
-    --btn-getstarted-height: 65px;
-    --btn-getstarted-font: 18px;
-    /* border-radius: 5px; */
-
-    /* --getstarted-picture-width: 460px; */
-
-    --skills-section-wrapper-height: 662px;
-    --skills-section-title-font: 20px;
-    --skills-section-title-line: 1.8;
-    --skills-section-content-pad-bot: 20px;
-    --skills-section-btn-width: 178px;
-    --skills-section-btn-height: 50px;
-    --skills-section-btn-font: 16px;
-  }
-
-  .navigation-bar {
-    display: none;
-  }
-
-  .title-content {
-    font-size: 20px;
-    line-height: 2;
-  }
-
-  .getstarted-title::after {
-    transform: scale(0.9);
-  }
-
-  .btn-getstarted {
-    border-radius: 5px;
-  }
-
-  .skills-section > .title-section {
-    margin-top: 56px;
-    margin-bottom: 37px;
-  }
-
-  .back-box {
-    padding-left: 17px;
-    padding-right: 10px;
-  }
-
-  .writing-section,
-  .reading-section {
-    padding-bottom: 27px;
-  }
-
-  .writing-section-pic {
-    margin-bottom: -15px;
-    margin-left: 15px;
-    max-width: 180px;
-  }
-
-  .listening-section-pic {
-    max-width: 80%;
-  }
-
-  /* ABOUT US */
-
-  .about-section {
-    margin-top: 106px;
-  }
-
-  .about-wrapper {
-    height: 338px;
-  }
-
-  .about-content {
-    font-size: 14px;
-  }
-
-  .about-left-column {
-    max-width: 49.6%;
-  }
-
-  .about-item-content {
-    font-size: 22px;
-  }
-
-  .about-item-title {
-    font-size: 13px;
-  }
-
-  .about-pic-wrapper {
-    background-color: inherit;
-    height: 286px;
-    top: -39px;
-  }
-
-  .about-pic {
-    max-width: 121%;
-  }
-
-  /* Price */
-
-  .pricing-wrapper {
-    margin-top: 32px;
-  }
-
-  .pricing-content {
-    padding-top: 10px;
-    font-size: var(--first-font-size);
-  }
-
-  .pricing-price-wrapper {
-    font-size: var(--first-font-size);
-  }
-
-  .price {
-    font-size: 22px;
-  }
-
-  .pricing-price-wrapper {
-    width: 205px;
-    height: 45px;
-  }
-
-  .picture[alt="Lesson"] {
-    position: relative;
-    top: -30px;
-  }
-
-  .pricing-column {
-    width: 32%;
-  }
-
-  /* Contact */
-
-  .contact-section {
-    margin-top: 65px;
-    margin-bottom: 141px;
-  }
-
-  .contact-pic {
-    width: 33%;
-    position: inherit;
-  }
-
-  .contact-right-column {
-    padding-left: 40px;
-  }
-
-  .contact-input {
-    width: 260px;
-    height: 50px;
-  }
-
-  .contact-btn {
-    width: 145px;
-    height: 50px;
-  }
-
-  .contact-content {
-    margin-top: 10px;
-    margin-bottom: 25px;
-  }
-
-  .terms-text {
-    font-size: 13px;
-  }
-
-  .terms-section {
-    padding-top: 25px;
-    padding-bottom: 25px;
-  }
-}
-
-/* 575 */
-@media (min-width: 575px) and (max-width: 709.98px) {
-  :root {
-    --block-width: 495px;
-    --body-font: 12px;
-    --title-section-font: 30px;
-    --title-section-lineheight: 2.22;
-    --btn-up-font: 18px;
-    --logo-font: 30px;
-    /* --nav-bar-list-font: 16px; */
-    --getstarted-title-font: 34px;
-    --getstarted-title-line: 1.33;
-    --getstarted-content-font: 16px;
-
-    /* FONTS */
-    --first-font-size: 16px;
-
-    --btn-getstarted-width: 292px;
-    --btn-getstarted-height: 80px;
-    --btn-getstarted-font: 24px;
-
-    /* --getstarted-picture-width: 460px; */
-
-    /* --btn-lettalk-width: 160px;
-    --btn-lettalk-height: 50px; */
-
-    --skills-section-wrapper-height: 696px;
-    --skills-section-title-font: 22px;
-    --skills-section-title-line: 1.8;
-    --skills-section-content-pad-bot: 20px;
-    --skills-section-btn-width: 200px;
-    --skills-section-btn-height: 50px;
-    --skills-section-btn-font: 18px;
-  }
-
-  .getstarted-section {
-    flex-direction: column-reverse;
-  }
-
-  .navigation-bar {
-    display: none;
-  }
-
-  .getstarted-wrapper {
-    max-width: inherit;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .getstarted-title {
-    /* justify-content: center; */
-  }
-  .getstarted-title::after {
-    content: "";
-  }
-
-  .getstarted-content {
-    /* text-align: center; */
-  }
-
-  .title-content {
-    font-size: 22px;
-    line-height: 2;
-  }
-
-  .skills-section > .title-section {
-    margin-top: 72px;
-    margin-bottom: 53px;
-  }
-
-  /* SKILLS SECTION --------------------------*/
-
-  .speaking-section {
-    display: none;
-  }
-  .section-for-mini-res {
-    display: initial;
-    max-width: inherit;
-  }
-
-  .section-for-mini-res,
-  .listening-section-wrapper {
-    width: calc(50% - 20px);
-    height: 534px;
-
-    /* display: flex; */
-    /* flex-direction: column; */
-    justify-content: center;
-  }
-
-  .listening-section {
-    height: inherit;
-  }
-  .right-column-wrapper {
-    max-width: inherit;
-  }
-  .skills-section-wrapper {
-    height: inherit;
-  }
-  .listening-section-wrapper {
-    flex-direction: row-reverse;
-  }
-
-  .write-read-wrapper {
-    height: 534px;
-  }
-
-  .writing-section,
-  .section-for-mini-res {
-    margin-left: 0;
-  }
-
-  /* SKILLS SECTION --------------------------*/
-
-  .listening-section {
-    display: flex;
-    /* flex-direction: column-reverse; */
-    /* margin-top: 20px; */
-    height: inherit;
-    /* align-items: center; */
-  }
-
-  .right-column-wrapper {
-    max-width: 100%;
-  }
-
-  .back-box {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-
-  .writing-section-pic {
-    margin-bottom: -35px;
-    margin-left: 31px;
-    max-width: 234px;
-  }
-
-  /* ABOUT US */
-
-  .about-section {
-    margin-top: 106px;
-  }
-
-  .about-wrapper {
-    height: 411px;
-  }
-
-  .about-content {
-    font-size: var(--first-font-size);
-  }
-
-  .about-item-content {
-    font-size: 30px;
-  }
-
-  .about-item-title {
-    font-size: var(--first-font-size);
-  }
-
-  .about-pic-wrapper {
-    background-color: inherit;
-    height: 286px;
-    top: -45px;
-  }
-
-  /* Price */
-
-  .pricing-wrapper {
-    margin-top: 32px;
-  }
-
-  .pricing-content {
-    padding-top: 10px;
-    font-size: var(--first-font-size);
-  }
-
-  .pricing-price-wrapper {
-    font-size: var(--first-font-size);
-  }
-
-  .price {
-    font-size: 24px;
-  }
-
-  .picture[alt="Lesson"] {
-    position: relative;
-    top: -30px;
-  }
-
-  /* Contact */
-
-  .contact-section {
-    margin-top: 150px;
-    margin-bottom: 190px;
-  }
-
-  .contact-pic {
-    width: 36%;
-    position: inherit;
-  }
-
-  .contact-right-column {
-    padding-left: 77px;
-  }
-
-  .contact-input {
-    width: 317px;
-    height: 60px;
-  }
-
-  .contact-btn {
-    width: 193px;
-    height: 60px;
-  }
-
-  .contact-content {
-    margin-top: 16px;
-    margin-bottom: 36px;
   }
 }

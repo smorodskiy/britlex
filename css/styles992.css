@@ -1,0 +1,152 @@
+/* 992px */
+@media (min-width: 942px) and (max-width: 1355.98px) {
+  :root {
+    --block-width: 942px;
+    --body-font: 14px;
+    --title-section-font: 36px;
+    --title-section-lineheight: 2.22;
+    --btn-up-font: 15px;
+    --logo-font: 30px;
+    --nav-bar-list-font: 16px;
+    --getstarted-title-font: 48px;
+    --getstarted-title-line: 1.33;
+    --getstarted-content-font: 20px;
+
+    /* FONTS */
+    --first-font-size: 16px;
+
+    --btn-getstarted-width: 292px;
+    --btn-getstarted-height: 80px;
+    --btn-getstarted-font: 24px;
+
+    /* --getstarted-picture-width: 460px; */
+
+    --btn-lettalk-width: 160px;
+    --btn-lettalk-height: 50px;
+
+    --skills-section-wrapper-height: 696px;
+    --skills-section-title-font: 22px;
+    --skills-section-title-line: 1.8;
+    --skills-section-content-pad-bot: 20px;
+    --skills-section-btn-width: 196px;
+    --skills-section-btn-height: 57px;
+    --skills-section-btn-font: 18px;
+  }
+
+  .title-content {
+    font-size: 22px;
+    line-height: 2;
+  }
+
+  .btn-getstarted {
+    border-radius: 8px;
+  }
+
+  .skills-section > .title-section {
+    margin-top: 72px;
+    margin-bottom: 53px;
+  }
+
+  .back-box {
+    padding-left: 28px;
+    padding-right: 17px;
+  }
+
+  .writing-section-pic {
+    margin-bottom: -35px;
+    margin-left: 15px;
+    /* max-width: 234px; */
+  }
+
+  /* ABOUT US */
+
+  .about-section {
+    margin-top: 106px;
+  }
+
+  .about-wrapper {
+    height: 411px;
+  }
+
+  .about-content {
+    font-size: var(--first-font-size);
+  }
+
+  .about-item-content {
+    font-size: 30px;
+  }
+
+  .about-item-title {
+    font-size: var(--first-font-size);
+  }
+
+  .about-pic-wrapper {
+    background-color: inherit;
+    height: 286px;
+    top: -45px;
+  }
+
+  /* Price */
+
+  .pricing-wrapper {
+    margin-top: 32px;
+  }
+
+  .pricing-content {
+    padding-top: 10px;
+    font-size: var(--first-font-size);
+  }
+
+  .pricing-price-wrapper {
+    font-size: var(--first-font-size);
+  }
+
+  .price {
+    font-size: 24px;
+  }
+
+  .pricing-price-wrapper {
+    width: 205px;
+    height: 45px;
+  }
+
+  .picture[alt="Lesson"] {
+    position: relative;
+    top: -30px;
+  }
+
+  /* Contact */
+
+  .contact-section {
+    margin-top: 150px;
+    margin-bottom: 190px;
+  }
+
+  .contact-pic {
+    width: 36%;
+    position: inherit;
+  }
+
+  .contact-right-column {
+    padding-left: 77px;
+  }
+
+  .contact-input {
+    width: 317px;
+    height: 60px;
+  }
+
+  .contact-btn {
+    width: 193px;
+    height: 60px;
+  }
+
+  .contact-content {
+    margin-top: 16px;
+    margin-bottom: 36px;
+  }
+
+  .terms-text {
+    font-size: 16px;
+  }
+}

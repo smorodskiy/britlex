@@ -1,0 +1,184 @@
+/* 767px */
+@media (min-width: 690px) and (max-width: 941.98px) {
+  :root {
+    --block-width: 690px;
+    --body-font: 13px;
+    --title-section-font: 30px;
+    --title-section-lineheight: 2.22;
+    --btn-up-font: 15px;
+    --logo-font: 30px;
+    --nav-bar-list-font: 16px;
+    --getstarted-title-font: 36px;
+    --getstarted-title-line: 1.33;
+    --getstarted-content-font: 16px;
+
+    /* FONTS */
+    --first-font-size: 14px;
+
+    --btn-getstarted-width: 236px;
+    --btn-getstarted-height: 65px;
+    --btn-getstarted-font: 18px;
+    /* border-radius: 5px; */
+
+    /* --getstarted-picture-width: 460px; */
+
+    --skills-section-wrapper-height: 662px;
+    --skills-section-title-font: 20px;
+    --skills-section-title-line: 1.8;
+    --skills-section-content-pad-bot: 20px;
+    --skills-section-btn-width: 178px;
+    --skills-section-btn-height: 50px;
+    --skills-section-btn-font: 16px;
+  }
+
+  .navigation-bar {
+    display: none;
+  }
+
+  .title-content {
+    font-size: 20px;
+    line-height: 2;
+  }
+
+  .getstarted-title::after {
+    transform: scale(0.9);
+  }
+
+  .btn-getstarted {
+    border-radius: 5px;
+  }
+
+  .skills-section > .title-section {
+    margin-top: 56px;
+    margin-bottom: 37px;
+  }
+
+  .back-box {
+    padding-left: 17px;
+    padding-right: 10px;
+  }
+
+  .writing-section,
+  .reading-section {
+    padding-bottom: 27px;
+  }
+
+  .writing-section-pic {
+    margin-bottom: -15px;
+    margin-left: 15px;
+    /* max-width: 180px; */
+  }
+
+  .listening-section-pic {
+    max-width: 80%;
+  }
+
+  /* ABOUT US */
+
+  .about-section {
+    /* margin-top: 106px; */
+  }
+
+  .about-wrapper {
+    height: 338px;
+  }
+
+  .about-content {
+    font-size: 14px;
+  }
+
+  .about-left-column {
+    max-width: 49.6%;
+  }
+
+  .about-item-content {
+    font-size: 22px;
+  }
+
+  .about-item-title {
+    font-size: 13px;
+  }
+
+  .about-pic-wrapper {
+    background-color: inherit;
+    height: 286px;
+    top: -39px;
+  }
+
+  .about-pic {
+    max-width: 121%;
+  }
+
+  /* Price */
+
+  .pricing-wrapper {
+    margin-top: 32px;
+  }
+
+  .pricing-content {
+    padding-top: 10px;
+    font-size: var(--first-font-size);
+  }
+
+  .pricing-price-wrapper {
+    font-size: var(--first-font-size);
+  }
+
+  .price {
+    font-size: 22px;
+  }
+
+  .pricing-price-wrapper {
+    width: 205px;
+    height: 45px;
+  }
+
+  .picture[alt="Lesson"] {
+    position: relative;
+    top: -30px;
+  }
+
+  .pricing-column {
+    width: 32%;
+  }
+
+  /* Contact */
+
+  .contact-section {
+    margin-top: 65px;
+    margin-bottom: 141px;
+  }
+
+  .contact-pic {
+    width: 33%;
+    position: inherit;
+  }
+
+  .contact-right-column {
+    padding-left: 40px;
+  }
+
+  .contact-input {
+    width: 260px;
+    height: 50px;
+  }
+
+  .contact-btn {
+    width: 145px;
+    height: 50px;
+  }
+
+  .contact-content {
+    margin-top: 10px;
+    margin-bottom: 25px;
+  }
+
+  .terms-text {
+    font-size: 13px;
+  }
+
+  .terms-section {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
