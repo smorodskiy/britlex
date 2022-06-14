@@ -111,7 +111,7 @@
   }
 
   .pricing-price-wrapper {
-    width: 205px;
+    width: inherit;
     height: 45px;
   }
 
